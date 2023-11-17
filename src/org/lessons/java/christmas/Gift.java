@@ -22,4 +22,12 @@ public class Gift {
 	public void setRecipient(String recipient) {
 		this.recipient = recipient;
 	}
+	
+	@Override
+	public String toString() {
+	    return "Gift{" +
+	        "name='" + name + '\'' +
+	        ", recipient='" + recipient + '\'' +
+	        '}';
+	}
 }
