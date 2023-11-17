@@ -1,7 +1,6 @@
 package org.lessons.java.christmas;
 
 import java.util.*;
-import java.util.Scanner;
 
 public class Main {
 
@@ -32,6 +31,27 @@ public class Main {
 			loopKey = in.nextLine(); 
 		}
 		while(loopKey.equalsIgnoreCase("si"));
+		
+		
+		System.out.println("come vuoi filtrare la tua ricerca?");
+		System.out.println("1 = Filtro per nome / 2 = Filtra per regalo");
+		int filterChoice = in.nextInt();
+		if(filterChoice == 1) {
+			// sto dicendo "Ordina la lista di regali in base al nome del regalo";
+			//Collections.sort(gifts,Comparator.comparing(gift -> gift.getName()));
+			gifts.sort(Comparator.comparing(gift -> gift.getName()));
+		}
+		else {
+			gifts.sort(Comparator.comparing(gift -> gift.getRecipient()));
+		}
+		
+		// stampiamo tutta la lista al termine del ciclo usando la versione enhanced di for;
+		System.out.println("La tua lista e:");
+		
+		for (Gift gift : gifts) {
+			System.out.println(gift);
+		}
+		
 		
 		in.close();
 	}
