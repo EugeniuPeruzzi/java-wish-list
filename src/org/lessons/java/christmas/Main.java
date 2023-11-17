@@ -46,7 +46,7 @@ public class Main {
 		}
 		
 		// stampiamo tutta la lista al termine del ciclo usando la versione enhanced di for;
-		System.out.println("La tua lista e:");
+		System.out.println("La tua lista e: " + "\n ______________________\n");
 		
 		for (Gift gift : gifts) {
 			System.out.println(gift);
